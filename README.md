@@ -1,2 +1,2 @@
 # JAVA_Programming
-Programs and assignments for Logic Building batch - JAVA
+Java exercises to improve coding logic and problem-solving.
