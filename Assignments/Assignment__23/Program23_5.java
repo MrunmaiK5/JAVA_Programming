@@ -31,6 +31,17 @@ class Program23_5
     }
 }
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function name:  Product
+//  Description:    Calculates the product of odd numbers from given array.
+//  Input:          Integer array
+//  Output:         Integer
+//  Author:         Mrunmai Jitendra Khadpe
+//  Date:           16/11/2025
+//
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
 class Logic
 {
     int Product(int Arr[], int iLength)

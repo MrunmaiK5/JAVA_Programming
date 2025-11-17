@@ -35,6 +35,17 @@ class Program23_4
     }
 }
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function name:  Range
+//  Description:    Returns the elements from array that are in the provided range.
+//  Input:          Integer array
+//  Output:         Void
+//  Author:         Mrunmai Jitendra Khadpe
+//  Date:           16/11/2025
+//
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
 class Logic
 {
     void Range(int Arr[], int iLength, int iNo, int iStart, int iEnd)

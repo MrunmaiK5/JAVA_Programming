@@ -40,6 +40,17 @@ class Program23_1
     }
 }
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function name:  Check
+//  Description:    Check whether the given number is present in array.
+//  Input:          Integer array
+//  Output:         Boolean
+//  Author:         Mrunmai Jitendra Khadpe
+//  Date:           16/11/2025
+//
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
 class Logic
 {
     boolean Check(int Arr[], int iLength,int iNo)

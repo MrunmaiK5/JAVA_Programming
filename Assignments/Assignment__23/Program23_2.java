@@ -34,6 +34,17 @@ class Program23_2
     }
 }
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function name:  FirstOcc
+//  Description:    Returns the first occurence of the given number in array.
+//  Input:          Integer array
+//  Output:         Integer
+//  Author:         Mrunmai Jitendra Khadpe
+//  Date:           16/11/2025
+//
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
 class Logic
 {
     int FirstOcc(int Arr[], int iLength, int iNo)

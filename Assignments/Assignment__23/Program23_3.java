@@ -34,6 +34,17 @@ class Program23_3
     }
 }
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function name:  LastOcc
+//  Description:    Returns the last occurence of the given number in array.
+//  Input:          Integer array
+//  Output:         Integer
+//  Author:         Mrunmai Jitendra Khadpe
+//  Date:           16/11/2025
+//
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
 class Logic
 {
     int LastOcc(int Arr[], int iLength, int iNo)
