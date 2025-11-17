@@ -31,6 +31,17 @@ class Program22_5
     }    
 }
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function name:  Frequrncy
+//  Description:    Calculates the count of a given number from given numbers.
+//  Input:          Integer array
+//  Output:         Integer
+//  Author:         Mrunmai Jitendra Khadpe
+//  Date:           16/11/2025
+//
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
 class Logic
 {
     int Frequency(int Arr[], int iLength, int iNo)

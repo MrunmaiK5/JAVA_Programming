@@ -26,6 +26,17 @@ class Program22_4 {
     }
 }
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function name:  Frequency
+//  Description:    Calculates the count of 11 from given numbers.
+//  Input:          Integer array
+//  Output:         Integer
+//  Author:         Mrunmai Jitendra Khadpe
+//  Date:           16/11/2025
+//
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
 class Logic 
 {
     int Frequency(int Arr[], int iLength)

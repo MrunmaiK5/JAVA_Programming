@@ -28,6 +28,17 @@ class Program22_1
     }
 }
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function name:  CountEven
+//  Description:    Calculates the count of even numbers from given numbers.
+//  Input:          Integer array
+//  Output:         Integer
+//  Author:         Mrunmai Jitendra Khadpe
+//  Date:           16/11/2025
+//
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
 class Logic
 {
     int CountEven(int Arr[], int iLength)

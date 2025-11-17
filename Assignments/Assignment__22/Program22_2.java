@@ -30,6 +30,17 @@ class Program22_2
     }
 }
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function name:  Frequency
+//  Description:    Calculates the difference between frequency of wvwn and odd numbers.
+//  Input:          Integer array
+//  Output:         Integer
+//  Author:         Mrunmai Jitendra Khadpe
+//  Date:           16/11/2025
+//
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
 class Logic
 {
     int Frequency(int Arr[], int iLength)
