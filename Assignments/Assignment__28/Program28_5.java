@@ -39,6 +39,7 @@ class Pattern
     {
         int i=0,j=0, iNo=0;
 
+        iNo=1;
         for(i=iRow; i>=1; i--)
         {
             for(j=1; j<=iCol; j++, iNo++)
