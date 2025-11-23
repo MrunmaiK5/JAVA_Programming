@@ -52,11 +52,11 @@ class Pattern
             {
                 if (i==iRow || i==1 || j==1 || j==iCol)
                 {
-                    System.out.printf("$\t");
+                    System.out.printf("*\t");
                 }
                 else
                 {
-                    System.out.printf("*\t");
+                    System.out.printf("@\t");
                 }
                 
             }

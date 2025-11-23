@@ -2,7 +2,7 @@ package Assignment__30;
 
 import java.util.Scanner;
 
-class Program30_4
+class Program30_5
 {
     public static void main(String A[])
     {
