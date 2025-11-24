@@ -29,7 +29,7 @@ class Program32_5
 //  Input:          Integer
 //  Output:         Void
 //  Author:         Mrunmai Jitendra Khadpe
-//  Date:           23/11/2025
+//  Date:           24/11/2025
 //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -58,7 +58,6 @@ class Pattern
                 {
                     System.out.printf(" \t");
                 }
-                
             }
 
             System.out.printf("\n");
