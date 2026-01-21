@@ -1,14 +1,13 @@
-# JAVA_Programming
+# JAVA Programming
 
-This repository contains Java programs focused on object-oriented programming.
-It includes logic-based programs using classes, objects, and methods.
-The code is written clearly for easy understanding.
+This repository contains Java programs designed to strengthen object-oriented thinking and problem-solving skills.  
+It includes assignment-based programs and hands-on practice covering core Java fundamentals.
 
 ## Repository Structure
-
+```
 JAVA_Programming/
-├── Codes/        # Java practice programs
-
-├── Assignments/ # Additional programs
-
-├── README.md    # Repository information
+├── Assignments/   # Java assignment programs
+├── Codes/         # Core Java and OOP implementations
+├── .gitignore
+└── README.md
+```
