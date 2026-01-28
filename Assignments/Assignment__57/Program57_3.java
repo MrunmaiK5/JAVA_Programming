@@ -3,6 +3,17 @@ package Assignment__57;
 import java.io.File;
 import java.util.Scanner;
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function name:  CreateDictX
+//  Description:    Takes a Directory name from user and creates the directory
+//  Input:          String
+//  Output:         Nothing
+//  Author:         Mrunmai Jitendra Khadpe
+//  Date:           28/01/2026
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 public class Program57_3 
 {
     public static void main(String[] A) 

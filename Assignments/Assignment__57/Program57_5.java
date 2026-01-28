@@ -3,6 +3,17 @@ package Assignment__57;
 import java.io.File;
 import java.util.Scanner;
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function name:  ListFiles
+//  Description:    Takes directory name and prints all the files and their size from the directory
+//  Input:          String
+//  Output:         Nothing
+//  Author:         Mrunmai Jitendra Khadpe
+//  Date:           28/01/2026
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 public class Program57_5
 {
     public static void main(String[] A) 
@@ -15,13 +26,13 @@ public class Program57_5
         DictName = sc.nextLine();
 
         FileX fxobj = new FileX();
-        fxobj.CreateDictX(DictName);
+        fxobj.ListFiles(DictName);
     }
 }
 
 class FileX
 {
-    public void CreateDictX(String DName)
+    public void ListFiles(String DName)
     {
         String Arr[] = new String[30];
         int iCnt = 0;

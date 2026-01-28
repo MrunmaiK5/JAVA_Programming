@@ -7,6 +7,17 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.Scanner;
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function name:  CopyX
+//  Description:    Takes 2 file names and copy contents from one file to another file
+//  Input:          String, String
+//  Output:         Nothing
+//  Author:         Mrunmai Jitendra Khadpe
+//  Date:           28/01/2026
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 public class Program57_1 
 {
     public static void main(String[] A) 
