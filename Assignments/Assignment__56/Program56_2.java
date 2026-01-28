@@ -36,6 +36,7 @@ class FileX
     public void ReadFileX(String name)
     {
         char Arr[] = new char[100];
+        int iCnt = 0;
 
         File file = new File(name);
 
@@ -51,9 +52,9 @@ class FileX
 
                 bfr.read(Arr,0,Arr.length);
 
-                for(int i = 0; i<Arr.length; i++)
+                for(iCnt = 0; iCnt<Arr.length; iCnt++)
                 {
-                    System.out.print(Arr[i]);
+                    System.out.print(Arr[iCnt]);
                 }
 
             } 
