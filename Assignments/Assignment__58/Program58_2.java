@@ -1,9 +1,7 @@
 package Assignment__58;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.util.Scanner;
+import java.io.*;
+import java.util.*;
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //
@@ -18,7 +16,7 @@ import java.util.Scanner;
 
 public class Program58_2
 {
-    public static void main(String[] A) 
+    public static void main(String[] A) throws Exception
     {
         Scanner sc = new Scanner(System.in);
         
@@ -34,41 +32,33 @@ public class Program58_2
 
 class FileX
 {
-    public void WriteList(String DName)
+    public void WriteList(String DName) throws Exception
     {
-        String Arr[] = new String[30];
-        char Brr[] = new char[20];
         int iCnt = 0;
-        int offset = 0;
         
-        try 
+        File fobj = new File(DName);
+
+        String filename = "Marvellous.txt";
+        FileOutputStream foobj = new FileOutputStream(filename);
+
+        if ((fobj.isDirectory()) && (fobj.exists())) 
         {
-            File fobj = new File(DName);
-            String filename = "Marvellous.txt";
-            BufferedWriter bfw = new BufferedWriter(new FileWriter(filename,true));
-
-            if (fobj.isDirectory() == true) 
+            File Arr[] = fobj.listFiles();
+            
+            for (iCnt = 0; iCnt < Arr.length; iCnt++) 
             {
-                Arr = fobj.list();
+                String DictFiles = Arr[iCnt].getName();
+                byte Brr[] = DictFiles.getBytes();
+                foobj.write(Brr);
 
-                for(iCnt = 0; iCnt < Arr.length; iCnt++)
-                {
-                    Brr = Arr[iCnt].toCharArray();
-                    bfw.write(Brr,offset,Brr.length);
-                    bfw.newLine();
-                }
-                bfw.close();
-                System.out.println("Successfully written the files list in the Marvellous.txt");
             }
-            else
-            {
-                System.out.println("No such directory exist");
-            }
-
-        } 
-        catch (Exception e) 
-        {
-            System.out.println("Something went wrong!!");
+            foobj.close();
+            System.out.println("Written names successfully");
         }
+        else
+        {
+            System.out.println("No such directory exist");
+        }
+
     }
 }

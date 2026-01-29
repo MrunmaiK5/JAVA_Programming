@@ -1,10 +1,6 @@
 package Assignment__58;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
+import java.io.*;
 import java.util.Scanner;
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -21,7 +17,7 @@ import java.util.Scanner;
 
 public class Program58_3
 {
-    public static void main(String[] A) 
+    public static void main(String[] A) throws Exception
     {
         Scanner sc = new Scanner(System.in);
         
@@ -37,44 +33,45 @@ public class Program58_3
 
 class FileX
 {
-    public void WriteFileContent(String DName)
+    public void WriteFileContent(String DName) throws Exception
     {
+       File fobj = new File(DName);
         
-        char Brr[] = new char[20];
-        int iCnt = 0;
-        int offset = 0;
-        int Size = 0;
-        
-        try 
+        int iRet = 0;
+        byte Buffer[] = new byte[1024];
+
+        if ((fobj.exists()) && (fobj.isDirectory())) 
         {
-            File fobj = new File(DName);
-            String filename = "Marvellous.txt";
-            BufferedWriter bfw = new BufferedWriter(new FileWriter(filename,true));
+            File Packobj = new File("Mrunmai1.txt");
             
+            Packobj.createNewFile();
 
-            if (fobj.isDirectory() == true) 
+            FileOutputStream foobj = new FileOutputStream(Packobj);
+
+            FileInputStream fiobj = null;
+
+            File fArr[] = fobj.listFiles();
+
+            System.out.println("Number of files in the folder:"+fArr.length);
+
+            for(int i = 0; i<fArr.length; i++)
             {
-                File Arr[] = fobj.listFiles();
+                fiobj = new FileInputStream(fArr[i]);
 
-                for(iCnt = 0; iCnt < Arr.length; iCnt++)
+                while ((iRet = fiobj.read(Buffer)) != -1) 
                 {
-                    BufferedReader bfr = new BufferedReader(new FileReader(Arr[iCnt]));
-                    Size = bfr.read(Brr, 0, Brr.length);
-                    bfw.write(Brr,0,Size);
-                    bfw.newLine();
+                    foobj.write(Buffer, 0, iRet);
                 }
-                bfw.close();
-                System.out.println("Successfully written the files list in the Marvellous.txt");
-            }
-            else
-            {
-                System.out.println("No such directory exist");
-            }
+                System.out.println();
 
-        } 
-        catch (Exception e) 
+                fiobj.close();
+            }
+            foobj.close();
+            
+        }
+        else
         {
-            System.out.println("Something went wrong!!");
+            System.out.println("There is no such folder");
         }
     }
 }

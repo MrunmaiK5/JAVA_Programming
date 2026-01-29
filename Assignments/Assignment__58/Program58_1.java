@@ -34,36 +34,25 @@ class FileX
 {
     public void RegFileList(String DName)
     {
-        String Arr[] = new String[50];
         int iCnt = 0;
-        
-        try 
+
+        File fobj = new File(DName);
+
+        if (fobj.isDirectory() && fobj.exists()) 
         {
-            File fobj = new File(DName);
+            File Arr[] = fobj.listFiles();
 
-            if (fobj.isDirectory() == true) 
+            for(iCnt = 0; iCnt < Arr.length; iCnt++)
             {
-                Arr = fobj.list();
-
-                for(iCnt = 0; iCnt < Arr.length; iCnt++)
+                if (Arr[iCnt].isFile() == true) 
                 {
-                    File obj= new File(DName, Arr[iCnt]);
-
-                    if (obj.isFile() == true) 
-                    {
-                        System.out.println(Arr[iCnt]);
-                    }
+                    System.out.println(Arr[iCnt].getName());
                 }
             }
-            else
-            {
-                System.out.println("No such directory exist");
-            }
-
-        } 
-        catch (Exception e) 
+        }
+        else
         {
-            System.out.println("Something went wrong!!");
+            System.out.println("No such directory exist");
         }
     }
 }
