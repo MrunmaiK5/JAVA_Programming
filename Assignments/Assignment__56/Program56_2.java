@@ -1,7 +1,7 @@
 package Assignment__56;
 
 import java.io.*;
-import java.util.Scanner;
+import java.util.*;
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //
@@ -16,7 +16,7 @@ import java.util.Scanner;
 
 public class Program56_2
 {
-    public static void main(String[] args) 
+    public static void main(String[] args) throws Exception 
     {
         Scanner sc = new Scanner(System.in);
         
@@ -25,43 +25,38 @@ public class Program56_2
         System.out.println("Enter file name: ");
         fileName = sc.nextLine();
 
-        FileX fobj = new FileX();
-        fobj.ReadFileX(fileName);
-
+        FileX fxobj = new FileX();
+        fxobj.ReadFileX(fileName);
     }
 }
 
 class FileX
 {
-    public void ReadFileX(String name)
+    public void ReadFileX(String name)  throws Exception
     {
-        char Arr[] = new char[100];
-        int iCnt = 0;
-
-        File file = new File(name);
-
-        if (file.exists() != true) 
+        int iRet = 0;
+        String str = null;
+        File fobj = new File(name);
+        FileInputStream fiobj = null;
+        
+        if (fobj.exists()) 
         {
-            System.out.println("File does not exist");
+            byte Arr[] = new byte[100];
+            
+            fiobj = new FileInputStream(fobj);
+
+            while((iRet = fiobj.read(Arr,0,Arr.length)) != -1)
+            {
+                str = new String(Arr, 0, iRet);
+                System.out.print(str);
+                str = null;
+            }            
+            
         }
         else
         {
-            try 
-            {
-                BufferedReader bfr = new BufferedReader(new FileReader(name));
-
-                bfr.read(Arr,0,Arr.length);
-
-                for(iCnt = 0; iCnt<Arr.length; iCnt++)
-                {
-                    System.out.print(Arr[iCnt]);
-                }
-
-            } 
-            catch (IOException e) 
-            {
-                System.out.println("Something went wrong");
-            }
-        }   
+            System.out.println("File does not exists !");
+        }
+        fiobj.close();
     }
 }

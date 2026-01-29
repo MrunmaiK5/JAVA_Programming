@@ -34,31 +34,24 @@ class FileX
 {
     public void ListFiles(String DName)
     {
-        String Arr[] = new String[30];
         int iCnt = 0;
-        try 
-        {
-            
-            File fobj = new File(DName);
+        
+        File fobj = new File(DName);
 
-            if (fobj.isDirectory() == true) 
-            {
-                Arr = fobj.list();
-                System.out.println("Files: ");
-                for (iCnt = 0; iCnt < Arr.length; iCnt++) 
-                {
-                    System.out.println(Arr[iCnt]);
-                }
-            }
-            else
-            {
-                System.out.println("No such directory exist");
-            }
-
-        } 
-        catch (Exception e) 
+        if ((fobj.isDirectory()) && (fobj.exists())) 
         {
-            System.out.println("Something went wrong!!");
+            File Arr[] = fobj.listFiles();
+
+            for (iCnt = 0; iCnt < Arr.length; iCnt++) 
+            {
+                System.out.println("Name of file :"+Arr[iCnt].getName());
+            }
         }
+        else
+        {
+            System.out.println("No such directory exist");
+        }
+
+ 
     }
 }

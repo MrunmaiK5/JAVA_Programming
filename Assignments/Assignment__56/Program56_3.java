@@ -16,7 +16,7 @@ import java.util.Scanner;
 
 public class Program56_3
 {
-    public static void main(String[] args) 
+    public static void main(String[] args) throws Exception
     {
         Scanner sc = new Scanner(System.in);
         
@@ -32,39 +32,30 @@ public class Program56_3
 
 class FileX
 {
-    public void AppendFileContent(String name)
+    public void AppendFileContent(String name) throws Exception
     {
-        Scanner sc = new Scanner(System.in);   
-        String content = "";
-
-        //created an object of the File class that points to that path of file.
-        File file = new File(name);
-
-        if (file.exists() != true) 
+        int iRet = 0;
+        String str = null;
+        File fobj = new File(name);
+        FileOutputStream foobj = null;
+        
+        if (fobj.exists()) 
         {
-            System.out.println("File does not exist");
+            byte Arr[] = new byte[100];
+            
+            foobj = new FileOutputStream(fobj);
+            str = "Jay Ganesh...";
+
+            Arr = str.getBytes();
+
+            foobj.write(Arr);
+
+            System.out.println("Content written successfully!!");
         }
         else
         {
-            try 
-            {
-                BufferedWriter bfo = new BufferedWriter(new FileWriter(name,true));
-
-                bfo.flush();
-
-                System.out.println("Enter content to write in a file: ");
-                content = sc.nextLine();
-
-                bfo.write(content, 0,content.length());
-                bfo.close();
-
-                System.out.println("Contents written successfully!!");
-            } 
-            catch (IOException e) 
-            {
-                System.out.println("Something went wrong");
-            }
-        }   
-    
+            System.out.println("File does not exists !");
+        }
+        foobj.close();
     }
 }

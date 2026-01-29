@@ -16,7 +16,7 @@ import java.util.Scanner;
 
 public class Program56_4 
 {
-    public static void main(String[] args) 
+    public static void main(String[] args) throws Exception
     {
         Scanner sc = new Scanner(System.in);
         
@@ -32,27 +32,28 @@ public class Program56_4
 
 class FileX
 {
-    public void CreateFileX(String name)
+    public void CreateFileX(String name) throws Exception
     {
-        //created an object of the File class that points to that path of file.
-        File file = new File(name);
+        File fobj = null;
 
-        if (file.exists() != true) 
+        fobj = new File(name);
+
+        if (fobj.exists()) 
         {
-            try 
-            {
-                file.createNewFile();
-                System.out.println("File created successfully!!");
-            } 
-            catch (Exception e) 
-            {
-                System.out.println("Unable to create file !");
-            }
+            System.out.println("File already exists");
         }
         else
         {
-            System.out.println("File already exist !");
-        }   
-    
+            boolean bRet = fobj.createNewFile();
+            if (bRet == true) 
+            {
+                System.out.println("File created successfully");
+            }
+            else
+            {
+                System.out.println("Uable to create file");
+            }
+        }
+
     }
 }
