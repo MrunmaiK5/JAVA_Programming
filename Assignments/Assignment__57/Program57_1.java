@@ -1,11 +1,7 @@
 package Assignment__57;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.util.Scanner;
+import java.io.*;
+import java.util.*;
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //
@@ -20,7 +16,7 @@ import java.util.Scanner;
 
 public class Program57_1 
 {
-    public static void main(String[] A) 
+    public static void main(String[] A) throws Exception
     {
         Scanner sc = new Scanner(System.in);
         
@@ -40,39 +36,36 @@ public class Program57_1
 
 class FileX
 {
-    public void CopyX(String src, String dest)
+    public void CopyX(String src, String dest)  throws Exception
     {
-        try 
+        int Size = 0;
+        int iRet = 0;
+        
+        File fobj1 = new File(src);
+        File fobj2 = new File(dest);
+
+        if (fobj1.exists() != true) 
         {
-            int Size = 0;
-            char Arr[] = new char[50];                                          // Stores content read from source file
-
-            File fobj1 = new File(src);
-            File fobj2 = new File(dest);
-
-            if (fobj1.exists() != true) 
-            {
-                System.out.println(src + " file doesnt exist!");
-                return;
-            }
-            if (fobj2.exists() != true) 
-            {
-                fobj2.createNewFile();
-            }
-
-            BufferedReader bfr = new BufferedReader(new FileReader(src));
-            BufferedWriter bfw = new BufferedWriter(new FileWriter(dest));
-
-            Size = bfr.read(Arr,0,Arr.length);                              // reads source file contents
-
-            bfw.write(Arr, 0, Size);                                        // writes content into destination file
-            bfw.close();
-
-            System.out.println("Copied content successfully!!");
-        } 
-        catch (Exception e) 
-        {
-            System.out.println("Something went wrong");
+            System.out.println(src + " file doesnt exist!");
+            return;
         }
+        if (fobj2.exists() != true) 
+        {
+            fobj2.createNewFile();
+        }
+
+        FileInputStream bfr = new FileInputStream(fobj1);
+        FileOutputStream bfw = new FileOutputStream(fobj2);
+
+        byte Arr[] = new byte[100];
+
+        while ((iRet = bfr.read(Arr)) != -1) 
+        {
+            bfw.write(Arr,0,iRet);
+        }
+        bfw.close();
+        bfr.close();
+        System.out.println("Copied content successfully!!");
+
     }
 }

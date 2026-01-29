@@ -16,7 +16,7 @@ import java.util.Scanner;
 
 public class Program57_5
 {
-    public static void main(String[] A) 
+    public static void main(String[] A) throws Exception
     {
         Scanner sc = new Scanner(System.in);
         
@@ -32,33 +32,26 @@ public class Program57_5
 
 class FileX
 {
-    public void ListFiles(String DName)
+    public void ListFiles(String DName) throws Exception
     {
-        String Arr[] = new String[30];
         int iCnt = 0;
-        try 
+        
+        File fobj = new File(DName);
+
+        if ((fobj.isDirectory()) && (fobj.exists())) 
         {
-            
-            File fobj = new File(DName);
+            File Arr[] = fobj.listFiles();
 
-            if (fobj.isDirectory() == true) 
+            for (iCnt = 0; iCnt < Arr.length; iCnt++) 
             {
-                Arr = fobj.list();
-
-                for (iCnt = 0; iCnt < Arr.length; iCnt++) 
-                {
-                    System.out.println(Arr[iCnt]+" "+Arr[iCnt].length());
-                }
+                System.out.println("Name of file :"+Arr[iCnt].getName()+" File size : "+Arr[iCnt].length());
             }
-            else
-            {
-                System.out.println("No such directory exist");
-            }
-
-        } 
-        catch (Exception e) 
-        {
-            System.out.println("Something went wrong!!");
         }
+        else
+        {
+            System.out.println("No such directory exist");
+        }
+
+
     }
 }

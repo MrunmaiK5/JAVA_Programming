@@ -16,7 +16,7 @@ import java.util.Scanner;
 
 public class Program57_3 
 {
-    public static void main(String[] A) 
+    public static void main(String[] A) throws Exception
     {
         Scanner sc = new Scanner(System.in);
         
@@ -32,27 +32,19 @@ public class Program57_3
 
 class FileX
 {
-    public void CreateDictX(String DName)
+    public void CreateDictX(String DName)  throws Exception
     {
-        try 
-        {
-            // create a directory in current working directory using mkdir
-            // -> returns true if directory is created
-            boolean fobj = new File(DName).mkdir();
+        // create a directory in current working directory using mkdir
+        // -> returns true if directory is created
+        boolean fobj = new File(DName).mkdir();
 
-            if (fobj == true) 
-            {
-                System.out.println("Directory created successfully !!");
-            }
-            else
-            {
-                System.out.println("Unable to create directory !");
-            }
-
-        } 
-        catch (Exception e) 
+        if (fobj == true) 
         {
-            System.out.println("Something went wrong!!");
+            System.out.println("Directory created successfully !!");
+        }
+        else
+        {
+            System.out.println("Unable to create directory !");
         }
     }
 }
