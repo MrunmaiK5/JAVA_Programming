@@ -2,6 +2,17 @@ package Assignment__72;
 
 import java.util.Scanner;
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function name:  SwapRows
+//  Description:    Swaps the elements from consecutive rows
+//  Input:          Integer 
+//  Output:         Nothing
+//  Author:         Mrunmai Jitendra Khadpe
+//  Date:           21/02/2026
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 class Program72_5
 {
     public static void main(String[] args) 

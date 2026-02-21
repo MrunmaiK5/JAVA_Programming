@@ -2,6 +2,17 @@ package Assignment__72;
 
 import java.util.Scanner;
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function name:  Frequency
+//  Description:    Counts the frequency of given number in matrix
+//  Input:          Integer Integer
+//  Output:         Integer
+//  Author:         Mrunmai Jitendra Khadpe
+//  Date:           21/02/2026
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 class Program72_2
 {
     public static void main(String[] args) 

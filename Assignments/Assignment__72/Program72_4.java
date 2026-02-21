@@ -2,6 +2,17 @@ package Assignment__72;
 
 import java.util.Scanner;
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function name:  AddColumn
+//  Description:    Adds the numbers in each column
+//  Input:          Integer 
+//  Output:         Integer
+//  Author:         Mrunmai Jitendra Khadpe
+//  Date:           21/02/2026
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 class Program72_4
 {
     public static void main(String[] args) 

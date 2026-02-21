@@ -2,6 +2,17 @@ package Assignment__72;
 
 import java.util.Scanner;
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function name:  AddDiagonal
+//  Description:    Adds the numbers in the diagonal of matrix
+//  Input:          Integer
+//  Output:         Integer
+//  Author:         Mrunmai Jitendra Khadpe
+//  Date:           21/02/2026
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 class Program72_1 
 {
     public static void main(String[] args) 
