@@ -1,6 +1,17 @@
 import java.util.*;
 
-class program_2
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Description : Calculate the number of clear days by subtracting the 
+//                total rainy and cloudy days from the 7 days in a week.
+//  Input       : Integer 
+//  Output      : Integer
+//  Author      : Mrunmai Jitendra Khadpe
+//  Date        : 08/10/2026
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+class program_3
 {
     public static void main(String A[])
     {
