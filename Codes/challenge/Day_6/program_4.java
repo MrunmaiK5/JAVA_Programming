@@ -49,7 +49,41 @@ class Result {
     public static void miniMaxSum(List<Integer> arr) 
     {
     // Write your code here
-        
+
+        long iMax = 0, iMin = 0;
+
+        long result[] = new long[arr.size()];
+
+        for (int i = 0; i < arr.size(); i++) 
+        {
+            long iSum = 0;
+            for (int j = 0; j < arr.size(); j++) 
+            {
+                if (i==j) 
+                {
+                    continue;    
+                }
+                iSum = iSum + arr.get(j);
+            }    
+            result[i] = iSum;
+        }
+
+        iMax = result[0];
+        iMin = result[0];
+
+        for (int i = 0; i < result.length; i++) 
+        {
+            if (iMax < result[i]) 
+            {
+                iMax = result[i];
+            }    
+            if (iMin > result[i]) 
+            {
+                iMin = result[i];    
+            }
+        }
+
+        System.out.println(iMin+" "+iMax);
     }
 
 }
